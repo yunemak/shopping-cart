@@ -1,13 +1,20 @@
 import { Link } from "react-router";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
 	return (
-		<header>
+		<header className={styles.header}>
 			<nav>
 				<ul>
-					<li>Home</li>
-					<li>Shop</li>
-					<li>Cart</li>
+					<li>
+						<Link to="/">Home</Link>
+					</li>
+					<li>
+						<Link to="/shop">Shop</Link>
+					</li>
+					<li>
+						<Link to="/cart">Cart</Link>
+					</li>
 				</ul>
 			</nav>
 		</header>
