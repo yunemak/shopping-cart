@@ -1,16 +1,12 @@
-import { Link } from "react-router";
+import { Outlet } from "react-router";
+import Navbar from "../Navbar/Navbar";
 
 const Layout = () => {
 	return (
-		<header>
-			<nav>
-				<ul>
-					<li>Home</li>
-					<li>Shop</li>
-					<li>Cart</li>
-				</ul>
-			</nav>
-		</header>
+		<>
+			<Navbar />
+			<Outlet />
+		</>
 	);
 };
 
