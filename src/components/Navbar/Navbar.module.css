@@ -26,6 +26,7 @@
 }
 
 .menuLink {
+	border-bottom: 3px solid var(--color-purple);
 	padding: 5px 10px;
 	color: white;
 	font-weight: bold;
@@ -33,5 +34,5 @@
 }
 
 .menuLink:hover {
-	background-color: rgb(53, 114, 53);
+	border-bottom: 3px solid var(--color-light-purple);
 }
