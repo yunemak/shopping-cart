@@ -6,11 +6,12 @@ const Shop = () => {
 			<div className={styles.item}>
 				<h2 className={styles.title}>Item Name</h2>
 				<img className={styles.img} alt="item image" />
-				<input type="number" />
+				<input type="number" classList={styles.itemAmountInput} />
 				<div>
 					<button className={styles.increaseAmountButton}>+</button>
 					<button className={styles.decreaseAmountButton}>-</button>
 				</div>
+				<button>Add To Cart</button>
 			</div>
 		</div>
 	);

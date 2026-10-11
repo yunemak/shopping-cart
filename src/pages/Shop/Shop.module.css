@@ -1,4 +1,5 @@
 .itemContainer {
+	margin: 0 50px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -9,6 +10,12 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	gap: 10px;
+}
+
+.itemAmountInput {
+	width: 50px;
+	background-color: blue;
 }
 
 .increaseAmountButton,

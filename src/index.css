@@ -16,3 +16,9 @@
 body {
 	background-color: var(--color-body-background);
 }
+
+#root {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
