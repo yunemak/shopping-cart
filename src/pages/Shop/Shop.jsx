@@ -24,7 +24,7 @@ const Shop = () => {
 	}
 
 	useEffect(() => {
-		let items = fetchItems();
+		fetchItems();
 		if (items === null) {
 			console.log("Problem");
 		}
