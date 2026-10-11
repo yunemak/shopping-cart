@@ -6,11 +6,11 @@ const Item = ({ item }) => {
 			<h2 className={styles.title}>{item.title}</h2>
 			<img src={item.image} className={styles.img} alt="item image" />
 			<input type="text" className={styles.itemAmountInput} />
-			<div>
-				<button className={styles.increaseAmountButton}>+</button>
+			<div className={styles.amountButtonsContainer}>
 				<button className={styles.decreaseAmountButton}>-</button>
+				<button className={styles.increaseAmountButton}>+</button>
 			</div>
-			<button>Add To Cart</button>
+			<button className={styles.addToCartButton}>Add To Cart</button>
 		</div>
 	);
 };
