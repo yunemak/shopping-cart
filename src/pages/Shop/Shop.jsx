@@ -1,8 +1,10 @@
 import Item from "../../components/Item/Item";
 import styles from "./Shop.module.css";
 import useFetch from "../../hooks/fetchData";
+import { useOutletContext } from "react-router";
 
 const Shop = () => {
+	const { addToCart } = useOutletContext();
 	const {
 		data: items,
 		isLoading,
@@ -20,7 +22,7 @@ const Shop = () => {
 	return (
 		<div className={styles.shop}>
 			{items.map((item) => (
-				<Item key={item.id} item={item} />
+				<Item key={item.id} item={item} addToCart={addToCart} />
 			))}
 		</div>
 	);

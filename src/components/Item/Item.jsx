@@ -1,6 +1,6 @@
 import styles from "./Item.module.css";
 
-const Item = ({ item }) => {
+const Item = ({ item, addToCart }) => {
 	return (
 		<div className={styles.item}>
 			<h2 className={styles.title}>{item.title}</h2>
@@ -10,7 +10,12 @@ const Item = ({ item }) => {
 				<button className={styles.decreaseAmountButton}>-</button>
 				<button className={styles.increaseAmountButton}>+</button>
 			</div>
-			<button className={styles.addToCartButton}>Add To Cart</button>
+			<button
+				onClick={() => addToCart(item)}
+				className={styles.addToCartButton}
+			>
+				Add To Cart
+			</button>
 		</div>
 	);
 };
