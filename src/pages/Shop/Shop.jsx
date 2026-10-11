@@ -13,7 +13,9 @@ const Shop = () => {
 			if (!response.ok) {
 				throw new Error("Response is not ok!");
 			}
-			return items;
+			const data = await response.json();
+
+			setItems(data);
 		} catch (error) {
 			console.log(`Error: ${error}`);
 		} finally {
@@ -28,6 +30,7 @@ const Shop = () => {
 		}
 		setItems(items);
 	}, []);
+	console.log(items);
 
 	return (
 		<div className={styles.shop}>

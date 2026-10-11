@@ -3,8 +3,8 @@ import styles from "./Item.module.css";
 const Item = ({ item }) => {
 	return (
 		<div className={styles.item}>
-			<h2 className={styles.title}>Item Name</h2>
-			<img className={styles.img} alt="item image" />
+			<h2 className={styles.title}>{item.title}</h2>
+			<img src={item.image} className={styles.img} alt="item image" />
 			<input type="text" className={styles.itemAmountInput} />
 			<div>
 				<button className={styles.increaseAmountButton}>+</button>
