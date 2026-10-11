@@ -1,6 +1,6 @@
 .header {
 	height: 100px;
-	background-color: rgb(73, 149, 73);
+	background-color: var(--color-purple);
 	display: flex;
 }
 

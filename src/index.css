@@ -1,7 +1,18 @@
+:root {
+	--color-purple: #802c6e;
+	--color-light-purple: #b88caf;
+	--color-item-background: #f1eff3;
+	--color-body-background: #f6f7f9;
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 	font-size: 20px;
 	font-family: sans-serif;
+}
+
+body {
+	background-color: var(--color-body-background);
 }
