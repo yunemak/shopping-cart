@@ -8,7 +8,7 @@ const Shop = () => {
 
 	async function fetchItems() {
 		try {
-			const response = await fetch("https://fakestoreapi.com/products/1");
+			const response = await fetch("https://fakestoreapi.com/products");
 
 			if (!response.ok) {
 				throw new Error("Response is not ok!");
@@ -34,7 +34,11 @@ const Shop = () => {
 
 	return (
 		<div className={styles.shop}>
-			{isLoading ? <p>Loading...</p> : <Item item={items} />}
+			{isLoading ? (
+				<p>Loading...</p>
+			) : (
+				items.map((item) => <Item key={item.id} item={item} />)
+			)}
 		</div>
 	);
 };
