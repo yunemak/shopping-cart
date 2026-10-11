@@ -1,33 +1,14 @@
-import { useEffect, useState } from "react";
 import Item from "../../components/Item/Item";
 import styles from "./Shop.module.css";
+import useFetch from "../../hooks/fetchData";
 
 const Shop = () => {
-	const [isLoading, setIsLoading] = useState(true);
-	const [items, setItems] = useState(null);
-	const [errorMessage, setErrorMessage] = useState("");
+	const {
+		data: items,
+		isLoading,
+		errorMessage,
+	} = useFetch("https://fakestoreapi.com/products");
 
-	useEffect(() => {
-		async function fetchItems() {
-			try {
-				const response = await fetch(
-					"https://fakestoreapi.com/products",
-				);
-				if (!response.ok) {
-					throw new Error(`HTTP error! Status: ${response.status}`);
-				}
-
-				const data = await response.json();
-				setItems(data);
-			} catch (error) {
-				setErrorMessage(error.message);
-			} finally {
-				setIsLoading(false);
-			}
-		}
-
-		fetchItems();
-	}, []);
 	if (isLoading) {
 		return <div>Loading...</div>;
 	}
