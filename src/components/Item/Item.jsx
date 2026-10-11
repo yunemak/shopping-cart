@@ -1,6 +1,6 @@
 import styles from "./Item.module.css";
 
-const Item = () => {
+const Item = ({ item }) => {
 	return (
 		<div className={styles.item}>
 			<h2 className={styles.title}>Item Name</h2>
