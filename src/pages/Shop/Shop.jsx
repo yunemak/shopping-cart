@@ -2,9 +2,10 @@ import Item from "../../components/Item/Item";
 import styles from "./Shop.module.css";
 import useFetch from "../../hooks/fetchData";
 import { useOutletContext } from "react-router";
+import Toast from "../../components/Toast/Toast";
 
 const Shop = () => {
-	const { addToCart } = useOutletContext();
+	const { addToCart, isAdded, setIsAdded } = useOutletContext();
 	const {
 		data: items,
 		isLoading,
@@ -24,6 +25,7 @@ const Shop = () => {
 			{items.map((item) => (
 				<Item key={item.id} item={item} addToCart={addToCart} />
 			))}
+			{isAdded ? <Toast /> : null}
 		</div>
 	);
 };

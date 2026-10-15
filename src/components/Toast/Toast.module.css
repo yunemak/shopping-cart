@@ -1,0 +1,7 @@
+.container {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	display: flex;
+	background-color: green;
+}
