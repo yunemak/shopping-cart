@@ -1,7 +1,42 @@
-.container {
+.toast {
 	position: fixed;
-	bottom: 10px;
-	left: 10px;
-	display: flex;
-	background-color: green;
+	bottom: 24px;
+	right: 24px;
+	z-index: 1000;
+
+	padding: 16px 24px;
+	border-radius: 10px;
+
+	/* Transparent glass background */
+	background: rgba(67, 223, 122, 0.65);
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
+
+	/* Sci-fi neon border */
+	border: 1px solid rgba(154, 248, 163, 0.35);
+
+	/* Text */
+	color: #000000;
+	font-size: 14px;
+	letter-spacing: 0.4px;
+
+	/* Subtle neon glow */
+	box-shadow:
+		0 0 12px rgba(0, 255, 255, 0.12),
+		inset 0 0 12px rgba(0, 255, 255, 0.04);
+
+	/* Entrance animation */
+	animation: toast-in 0.3s ease-out;
+}
+
+@keyframes toast-in {
+	from {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }

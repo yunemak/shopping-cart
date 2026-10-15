@@ -9,7 +9,7 @@ const Layout = () => {
 	function addToCart(item) {
 		setCart((prevCart) => [...prevCart, item]);
 		setIsAdded(true);
-		setTimeout(setIsAdded, 1000, false);
+		setTimeout(setIsAdded, 3000, false);
 		console.log(cart);
 	}
 	return (
